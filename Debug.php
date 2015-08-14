@@ -12,6 +12,14 @@ class Custom_Debug{
         }
     }
 
+    public static function sql($select, $exit = true){
+        echo '<pre>'.$select.'</pre>';
+
+        if ($exit){
+            die;
+        }
+    }
+
     public static function showClassMethodsAndParams($objClass, $exit = true){
         $methods = get_class_methods($objClass);
 
